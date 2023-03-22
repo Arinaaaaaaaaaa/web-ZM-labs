@@ -40,6 +40,20 @@
             margin: 2cm;
             text-indent: 0;
         }
+        .shadow {
+            text-shadow: 5px 5px 2px gray;
+        }
+        .blueshadow {
+            text-shadow: -10px 5px 3px blue;
+        }
+        .blueblur {
+            text-shadow: 0px 0px 3px blue;
+        }
+        .heading:hover {
+            opacity: 1;
+            text-shadow: 5px 5px 2px gray;
+            transition: 600ms;
+        }
     </style>
 </head>
 <body>
@@ -48,7 +62,7 @@
     </header>
 
     <main>
-        <h1>Расчет (формула)</h1>
+        <h1 class="heading">Расчет (формула)</h1>
 
         <div>
             Расчет сводится к определению разницы между активами и пассивами
@@ -103,6 +117,10 @@
         <div class="formula">
             Чистые активы = стр.1300 - ЗУ + ДБП
         </div>
+
+        <div class="shadow">Тень</div>
+        <div class="blueshadow">Синяя тень слева снизу</div>
+        <div class="blueblur">Синяя тень слева снизу</div>
     </main>
 
     <footer>
