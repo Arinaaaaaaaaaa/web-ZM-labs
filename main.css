@@ -12,6 +12,14 @@ header {
     font-size: 16pt;
 }
 
+header:hover {
+    transition: 3s 1s;
+    background:linear-gradient(to right bottom,red,orange,yellow,green,aqua,blue,purple);
+    color: rgb(63, 37, 101);
+    padding: 10px;
+    font-size: 26pt;
+}
+
 footer {
     background:linear-gradient(to right,red,orange,yellow,green,aqua,blue,purple);
     color: lightgreen;
@@ -20,6 +28,13 @@ footer {
     text-align: right;
 }
 
+footer:hover {
+    transition: 3s 1s;
+    background:linear-gradient(to right bottom,red,orange,yellow,green,aqua,blue,purple);
+    color: rgb(40, 1, 100);
+    padding: 10px;
+    font-size: 22pt;
+}
 a {
     color: green; 
     text-decoration: none;
