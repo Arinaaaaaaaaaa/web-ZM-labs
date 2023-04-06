@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Комикс</title>
+    <style>
+         img {
+            width: 620px;
+            height: 400px;
+            margin: 50px;
+        }
+         .cloud_one {
+            width: 180px; 
+            height: 75px;
+            text-align: center;
+            line-height: 70px;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(179, 6, 6);
+            z-index: 1; 
+        }
+         .cloud_two {
+            width: 85px; 
+            height: 40px;
+        }
+         .cloud_tree {
+            width: 45px; 
+            height: 25px;
+        }
+         .cloud_four {
+            width: 30px; 
+            height: 15px;
+        }
+         .cloud_one, .cloud_two, .cloud_tree, .cloud_four {
+            position: absolute;
+            border: 2px dashed rgb(179, 6, 6);
+            background: rgb(246, 233, 208);
+            border-radius: 65%; 
+            box-shadow: 7px 10px 5px rgba(255, 0, 0, 0.556);
+            display: none;
+         }
+         img:hover ~ div.cloud_one {
+            display: block;
+            transition: 7s 4s;
+         }
+         img:hover ~ div.cloud_two {
+            display: block;
+            transition: 7s 4s;
+         }
+         img:hover ~ div.cloud_tree {
+            display: block;
+            transition: 7s 4s;
+         }
+         img:hover ~ div.cloud_four {
+            display: block;
+            transition: 7s 4s;
+         }
+
+    </style>
+</head>
+<body>
+    <main>
+        <img src="https://phonoteka.org/uploads/posts/2021-06/1624137025_43-phonoteka_org-p-simpsoni-oboi-krasivo-43.jpg">
+
+        <div class = "cloud_one"; style = "top: 40px; left: 30px;">OMG!</div>
+        <div class = "cloud_two"; style = "top: 100px; left: 150px"></div>
+        <div class = "cloud_tree"; style = "top: 133px; left: 225px;"></div>
+        <div class = "cloud_four"; style = "top: 160px; left: 260px;"></div>
+        <div class = "cloud_one"; style = "top:61px; left: 600px;"> АAAAAA</div>
+        <div class = "cloud_two"; style = "top: 120px; left: 570px;"></div>
+        <div class = "cloud_tree"; style = "top: 155px; left: 540px;"></div>
+        <div class = "cloud_four"; style = "top: 180px; left: 515px;"></div> 
+       
+    </main>
+</body>
+</html>
