@@ -2,10 +2,32 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Зенкова А.М., Малкова А.О. Лабораторная 5</title>
     <link rel="stylesheet" href="main.css">
+    <script>
+        function showSum() {
+            let a = 5154;
+            let b = 7891;
+            let result = a + b;
+            alert ('Сумма ' + a + ' и ' + b + ' равна ' + result);
+        }
+    </script>
+
+    <style>
+        .message {
+           height: 40px;
+           width: 300px;
+           border: 3px solid lightcoral;
+           border-radius: 5px;
+           background: yellow;
+           color: darkblue;
+           text-align: center;
+           line-height: 38px;
+           font-size: 20px;
+           display: inline-block;
+           cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,6 +36,8 @@
     </header>
 
     <main>
+        <div class="message" onclick="showSum()">Сколько будет 5154+7891?</div>
+        <div class="message">Узнать, кто автор страницы</div>
     </main>
 
     <footer>
