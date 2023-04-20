@@ -65,6 +65,10 @@
             let cherry = parseInt(input_5.value);
             let total_price = apple*100 + pears*80 + oranges*150 + melons*250 + cherry*320 + 'р';
             document.getElementById('total').innerHTML = total_price;}
+
+            function changeBlock(block) {
+            block.style.opacity = "0";
+        }
     </script>
 
     <style>
@@ -95,6 +99,21 @@
             margin: 30px;
             padding: 20px;
             font-size: 18px;
+        }
+        .circle {
+            height: 50px;
+            width: 50px;
+            border: 2px solid #AB274F;
+            border-radius: 60%;
+            color: #AB274F;
+            text-align: center;
+            line-height: 50px;
+            font-size: 30px;
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+            top: 10px;
+            margin: 4px;
         }
     </style>
 </head>
@@ -142,8 +161,19 @@
             <input type="number" min="0" id="product_5">
 
             <div style="margin-top: 5px"><input type="button" value = "Рассчитать" onclick="show_price()"></div>
-            <div style="margin-top: 15px;">Общая цена: <div id="total" style="display: inline-block;"> </div>
+            <div style="margin-top: 15px;">Общая цена:</div> <div id="total" style="display: inline-block;"> </div>
         </div>
+
+        <div style="background: lime" class="circle" onclick="changeBlock(this)">1</div>
+        <div style="background: lightblue"class="circle" onclick="changeBlock(this)">2</div>
+        <div style="background: rgb(235, 166, 189)"class="circle" onclick="changeBlock(this)">3</div>
+        <div style="background: rgb(184, 180, 180)"class="circle" onclick="changeBlock(this)">4</div>
+        <div style="background: orange"class="circle" onclick="changeBlock(this)">5</div>
+        <div style="background: pink"class="circle" onclick="changeBlock(this)">6</div>
+        <div style="background: coral"class="circle" onclick="changeBlock(this)">7</div>
+        <div style="background: rgb(30, 172, 172)"class="circle" onclick="changeBlock(this)">8</div>
+        <div style="background: aqua"class="circle" onclick="changeBlock(this)">9</div>
+        <div style="background: lightcyan"class="circle" onclick="changeBlock(this)">10</div>
     </main>
 
     <footer onclick="showAuthor()">
