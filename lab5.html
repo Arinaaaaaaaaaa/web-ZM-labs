@@ -51,6 +51,20 @@
             output.style.backgroundColor = backColor;
             output.style.color = textColor;
         }
+        function show_price () {
+            let input_1 = document.getElementById('product_1');
+            let input_2 = document.getElementById('product_2');
+            let input_3 = document.getElementById('product_3');
+            let input_4 = document.getElementById('product_4');
+            let input_5 = document.getElementById('product_5');
+
+            let apple = parseInt(input_1.value);
+            let pears = parseInt(input_2.value);
+            let oranges = parseInt(input_3.value);
+            let melons = parseInt(input_4.value);
+            let cherry = parseInt(input_5.value);
+            let total_price = apple*100 + pears*80 + oranges*150 + melons*250 + cherry*320 + 'р';
+            document.getElementById('total').innerHTML = total_price;}
     </script>
 
     <style>
@@ -72,10 +86,20 @@
             width: 300px;
             height: 40px;
         }
+          .basket {
+            width: 300px;
+            height: 420px; 
+            border: 1px solid; 
+            border-radius: 5px;
+            position: relative; 
+            margin: 30px;
+            padding: 20px;
+            font-size: 18px;
+        }
     </style>
 </head>
 
-<body>
+<body style="height: 1000px;">
     <header onclick="showAuthor()">
         НГТУ, ФБ, Лабораторная работа 5
     </header>
@@ -98,6 +122,28 @@
         </div>
 
         <div id="output"></div>
+
+        <div class="basket">
+            <span style=" font-size: 30px;font-weight: bold;">Корзина товаров</span>
+
+            <div style="margin-top:  25px;">Яблоки (100р/кг):</div>
+            <input type="number" min="0" id="product_1">
+
+            <div style="margin-top:  20px;">Груши (80р/кг):</div>
+            <input type="number" min="0" id="product_2">
+
+            <div style="margin-top:  20px;">Апельсины (150р/кг):</div>
+            <input type="number" min="0" id="product_3">
+
+            <div style="margin-top:  20px;">Дыни (250р/шт):</div>
+            <input type="number" min="0" id="product_4">
+
+            <div style="margin-top:  20px;">Вишня (320р/кг):</div>
+            <input type="number" min="0" id="product_5">
+
+            <div style="margin-top: 5px"><input type="button" value = "Рассчитать" onclick="show_price()"></div>
+            <div style="margin-top: 15px;">Общая цена: <div id="total" style="display: inline-block;"> </div>
+        </div>
     </main>
 
     <footer onclick="showAuthor()">
