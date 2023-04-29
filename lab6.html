@@ -13,6 +13,13 @@
             padding: 5px;
             text-align: center;
         }
+        .rules {
+            width: 700px;
+            background-color: rgb(251, 245, 255);
+            border-radius: 23px;
+            padding: 15px;
+            margin: 40px auto;
+        }
     </style>
     <script>
         let number;
@@ -61,6 +68,16 @@
             document.getElementById('result').innerHTML = ""; //очищает блок "result";
             input.value = ""; //обнуление поля ввода
         }
+        function Show_rules(){
+            document.getElementById('botton_1').style.display = 'none';
+            document.getElementById('botton_2').style.display = 'block';
+            document.getElementById('rules').style.display = 'block';
+        }
+        function Hide_rules(){
+            document.getElementById('rules').style.display = 'none';
+            document.getElementById('botton_1').style.display = 'block';
+            document.getElementById('botton_2').style.display = 'none';
+        }
     </script>
 </head>
 
@@ -97,6 +114,22 @@
             </div>
             <div>
                 <button onclick="again()">Сыграть ещё раз</button>
+            </div>
+        </div>
+        <div>
+            <div class="rules">
+                <button onclick="Show_rules()" id = "botton_1">Показать правила игры</button>
+                <button onclick="Hide_rules()" style="display: none;" id = "botton_2">Скрыть правила игры</button>
+
+                <div id="rules" style="display: none;">
+                    <ol type="A">
+                        <li>Нажмите на кнопку "Сыграть в игру"</li>
+                        <li>Введите желаемое число</li>
+                        <li>Нажмите на кнопку "Угадать"</li>
+                        <li>Чтобы двигаться в нужном направлении, смотрите на подсказки</li>
+                        <li>Если захотите еще раз сыграть, то нажмите кнопку "Сыграть еще раз"</li>
+                    </ol>
+                </div>
             </div>
         </div>
     </main>
