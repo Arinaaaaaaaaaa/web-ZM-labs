@@ -20,6 +20,17 @@
             padding: 15px;
             margin: 40px auto;
         }
+        .color {
+            width: 400px;
+            height: 80px;
+            background-color: rgb(127, 199, 255);
+            border-radius: 5px;
+            text-align: center;
+            color: rgb(255, 223, 220);
+            margin: auto;
+            padding-top: 35px;
+            cursor: pointer;
+        }
     </style>
     <script>
         let number;
@@ -78,6 +89,38 @@
             document.getElementById('botton_1').style.display = 'block';
             document.getElementById('botton_2').style.display = 'none';
         }
+        function changeColor(div) {
+            if (div.style.backgroundColor == 'rgb(127, 199, 255)') {
+                 div.style.backgroundColor = 'rgb(181, 251, 221)';
+                 document.getElementById('color-name').innerHTML = 'мятный';
+                 div.style.color = 'rgb(133, 46, 186)'; 
+            }
+            else if (div.style.backgroundColor == 'rgb(181, 251, 221)') {
+                     div.style.backgroundColor = 'rgb(255, 235, 127)';
+                     document.getElementById('color-name').innerHTML = 'жёлтый';
+                     div.style.color = 'rgb(220, 55, 144)';
+            }
+            else if (div.style.backgroundColor == 'rgb(255, 235, 127)') {
+                     div.style.backgroundColor = 'rgb(245, 155, 175)';
+                     document.getElementById('color-name').innerHTML = 'розовый';
+                     div.style.color = 'rgb(251, 231, 181)';
+            }
+            else if (div.style.backgroundColor == 'rgb(245, 155, 175)') {
+                      div.style.backgroundColor = 'rgb(167, 113, 254)';
+                      document.getElementById('color-name').innerHTML = 'фиолетовый';
+                      div.style.color = 'rgb(190, 247, 97)'; 
+            }
+            else if (div.style.backgroundColor == 'rgb(167, 113, 254)') {
+                     div.style.backgroundColor = 'rgb(255, 173, 50)';
+                     document.getElementById('color-name').innerHTML = 'оранжевый';
+                     div.style.color = 'rgb(72, 207, 175)';
+            }
+            else {
+                  div.style.backgroundColor = 'rgb(127, 199, 255)';
+                  document.getElementById('color-name').innerHTML = 'синий';
+                  div.style.color = 'rgb(255, 223, 220)';
+            }
+        }
     </script>
 </head>
 
@@ -116,6 +159,7 @@
                 <button onclick="again()">Сыграть ещё раз</button>
             </div>
         </div>
+
         <div>
             <div class="rules">
                 <button onclick="Show_rules()" id = "botton_1">Показать правила игры</button>
@@ -131,6 +175,11 @@
                     </ol>
                 </div>
             </div>
+        </div>
+
+        <div class="color" ondblclick="changeColor(this)">
+            Цвет: <span id="color-name">синий</span><br>
+            Сделайте двойной щелчок, чтобы сменить.
         </div>
     </main>
 
