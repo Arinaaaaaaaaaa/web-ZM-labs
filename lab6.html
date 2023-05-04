@@ -31,6 +31,19 @@
             padding-top: 35px;
             cursor: pointer;
         }
+        .block {
+            width: 150px;
+            height: 150px;
+            background-color: #FF008B;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            line-height: 140px;
+            position: relative;
+            left: 15px;
+            transition: left 4s;
+            margin-top: 40px;
+            }
     </style>
     <script>
         let number;
@@ -121,6 +134,15 @@
                   div.style.color = 'rgb(255, 223, 220)';
             }
         }
+        function Block_movement(){
+           let bl = document.getElementById('bl');
+           if (bl.style.left == '15px'){        //движение вправо
+                bl.style.left = '1325px';
+            }
+           else if (bl.style.left != '15px'){       // движение влево
+                bl.style.left = '15px';
+           }
+         }
     </script>
 </head>
 
@@ -180,6 +202,10 @@
         <div class="color" ondblclick="changeColor(this)">
             Цвет: <span id="color-name">синий</span><br>
             Сделайте двойной щелчок, чтобы сменить.
+        </div>
+        
+        <div class="block"  id ="bl"  onclick="Block_movement()">
+            Щёлкни меня
         </div>
     </main>
 
