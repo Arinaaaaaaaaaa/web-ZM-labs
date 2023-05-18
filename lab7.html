@@ -57,6 +57,37 @@
                 blocks_op.appendChild(block_op);
             }
         }
+
+        function circle_colors(){
+            let circles = document.getElementById('circles');
+            let input = document.getElementById('user-number');
+            let Num = parseInt(input.value);
+
+
+            for (let i=0; i < Num; i++){
+                let circle = document.createElement('div');
+                circle.style.width = '100px';
+                circle.style.height = '100px';
+                circle.style.borderRadius = '50%';
+                circle.style.display = 'inline-block';
+                circle.style.marginTop = '20px';
+                circle.style.marginLeft = '10px';
+                circle.style.textAlign = 'center';
+                circle.style.lineHeight = '100px';
+                circle.style.fontSize = '30px';
+                circle.style.color = '#380438';
+
+                if ((Num-i)%2 != 0){ //  нечетные круги добавление цифр в круги
+                    circle.innerHTML =  Num-i; 
+                    circle.style.backgroundColor = '#FFC11E';
+                }
+                else {
+                    circle.innerHTML =  Num-i; 
+                    circle.style.backgroundColor = '#FF008B';
+                }
+                circles.appendChild(circle);
+            }
+        }
     </script>
 </head>
 
@@ -75,6 +106,11 @@
 
         <button onclick = "addTransparentBlocks()">Создать полупрозрачные блоки</button>
         <div id = "transparent-blocks"></div>
+
+        <input type="number" id = "user-number" value = "5" placeholder="Введите число кругов" style="margin: 5px;"><br>
+        <button onclick="circle_colors()"  style="margin-left: 5px;" >Оранжевое / Розовое</button>
+        <div id = "circles"></div>
+        
     </main>
 
     <footer>
