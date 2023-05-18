@@ -88,6 +88,18 @@
                 circles.appendChild(circle);
             }
         }
+
+        function MultiplicationTable(){
+            let array = [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+                         25, 26, 27, 28, 29, 30, 31, 32, 33];
+            let multi_table = document.getElementById('Multi');
+            for (let i=0; i < array.length; i++){
+                let nums = document.createElement('div');
+                nums.style.marginLeft = '10px';
+                nums.innerHTML = array[i] + ' *' + ' 11' + ' = ' + (array[i]*11);
+                multi_table.appendChild(nums);
+            }
+        }
     </script>
 </head>
 
@@ -109,7 +121,10 @@
 
         <input type="number" id = "user-number" value = "5" placeholder="Введите число кругов" style="margin: 5px;"><br>
         <button onclick="circle_colors()"  style="margin-left: 5px;" >Оранжевое / Розовое</button>
-        <div id = "circles"></div>
+        <div id = "circles" style="margin-bottom: 10px;"></div>
+
+        <button onclick = "MultiplicationTable()" style="margin: 5px;">Таблица умножения на 11</button>
+        <div id = "Multi"></div>
         
     </main>
 
