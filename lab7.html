@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <title>Зенкова А.М., Малкова А.О. Лабораторная 7</title>
     <link rel="stylesheet" href="main.css">
+    <style>
+        .opasity {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(58, 56, 211);
+            display: none;
+            margin: 30px 30px;
+        }
+    </style>
     <script>
         function addBlocks() {
             let blocks = document.getElementById('blocks');
@@ -33,6 +42,21 @@
             let average = sum / exchange.length;
             document.getElementById('detail').innerHTML = 'Среднее значение: ' + average;
         }
+
+        function addTransparentBlocks(){
+            let blocks_op = document.getElementById('transparent-blocks');
+
+            for (let i=0; i < 10; i++){
+                let block_op = document.createElement('div');
+                block_op.style.width = '120px';
+                block_op.style.height = '120px';
+                block_op.style.margin = '10px';
+                block_op.style.display = 'inline-block';
+                block_op.style.backgroundColor = "rgb(58, 56, 211)";
+                block_op.style.opacity = i * 0.1;
+                blocks_op.appendChild(block_op);
+            }
+        }
     </script>
 </head>
 
@@ -48,6 +72,9 @@
         <button onclick="showExchange()">Курс доллара</button>
         <table border="1" id="dollar-exchange"></table>
         <div id="detail"></div>
+
+        <button onclick = "addTransparentBlocks()">Создать полупрозрачные блоки</button>
+        <div id = "transparent-blocks"></div>
     </main>
 
     <footer>
