@@ -100,10 +100,21 @@
                 multi_table.appendChild(nums);
             }
         }
+        function MultiplicationTable2() {
+            let array = [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+                         25, 26, 27, 28, 29, 30, 31, 32, 33];
+            let multi_table2 = document.getElementById('Multi2');
+            for (let i=0; i < array.length; i++){
+                let nums = document.createElement('div');
+                nums.style.marginLeft = '10px';
+                nums.innerHTML = array[i] + ' *' + ' 21' + ' = ' + (array[i]*21);
+                multi_table2.appendChild(nums);
+            }
+        }
     </script>
 </head>
 
-<body>
+<body style="height: 10000px;">
     <header>
         НГТУ, ФБ, Лабораторная работа 7
     </header>
@@ -125,6 +136,9 @@
 
         <button onclick = "MultiplicationTable()" style="margin: 5px;">Таблица умножения на 11</button>
         <div id = "Multi"></div>
+
+        <button onclick = "MultiplicationTable2()" style="margin: 5px;">Таблица умножения на 21</button>
+        <div id = "Multi2"></div>
         
     </main>
 
