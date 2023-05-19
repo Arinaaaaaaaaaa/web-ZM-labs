@@ -111,6 +111,41 @@
                 multi_table2.appendChild(nums);
             }
         }
+        function showExchange_stock() {
+            let data_stock = ['18.05.2023', '17.05.2023', '16.05.2023', '15.05.2023', '12.05.2023',
+                            '11.05.2023', '10.05.2023', '08.05.2023', '05.05.2023', '04.05.2023']
+            let stock_exchange = [229.69, 227.44, 227.51, 227.89, 225.50, 
+                            230.80, 221.90, 236.75, 238.30, 237.36];
+            let table = document.getElementById('Stock');
+            for(let i = 0; i < stock_exchange.length; i++) {
+                let tr = document.createElement('tr');
+                let td = document.createElement('td');
+                let td1 = document.createElement('td');
+                let td2 = document.createElement('td');
+                td.innerHTML = data_stock[i];
+                td1.innerHTML = stock_exchange[i];
+                if (i > 0) {
+                    td2.innerHTML = (stock_exchange[i] - stock_exchange[i-1]).toFixed(2);
+                }
+                else {
+                    td2.innerHTML = '-';
+                }
+                tr.appendChild(td);
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                table.appendChild(tr);
+            }
+            let sum = 0;
+            for(let i = 0; i < stock_exchange.length; i++) {
+                sum = sum + stock_exchange[i];
+            }
+            let average = (sum / stock_exchange.length).toFixed(2);
+            document.getElementById('sber_average').innerHTML = 'Среднее значение: ' + average;
+            let minimum = Math.min (...stock_exchange);
+            document.getElementById('sber_min').innerHTML = 'Минимальное значение: ' + minimum;
+            let maximum = Math.max (...stock_exchange);
+            document.getElementById('sber_max').innerHTML = 'Максимальное значение: ' + maximum;
+        }
     </script>
 </head>
 
@@ -139,6 +174,12 @@
 
         <button onclick = "MultiplicationTable2()" style="margin: 5px;">Таблица умножения на 21</button>
         <div id = "Multi2"></div>
+
+        <button onclick = "showExchange_stock()">Курс акций Сбербанка России</button>
+        <table border="1" id="Stock"></table>
+        <div id="sber_average"></div>
+        <div id="sber_min"></div>
+        <div id="sber_max"></div>
         
     </main>
 
