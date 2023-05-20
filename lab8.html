@@ -9,12 +9,17 @@
         .datas {
             margin: 20px 0 0 10px;
         }
+        .times {
+            margin: 0 0 5px 1380px;
+            color: aliceblue;
+        }
     </style>
 </head>
 
 <body onload="showDate()">
     <header>
-        НГТУ, ФБ, Лабораторная работа 8
+        <div style="position: absolute;">НГТУ, ФБ, Лабораторная работа 8</div>
+        <div class= "times" id="time">00:00:00</div>
     </header>
 
     <main>
@@ -31,12 +36,14 @@
 
         <div id="current-date"></div>
 
-        <div>
-            <label>Дата рождения: <input type="date"></label>
+        <div style="margin-top: 20px;">
+            <label>Дата рождения: <input type="date" id="data"></label>
         </div>
+
         <div>
             <button onclick="showDaysCount()">Показать число дней</button>
             <div id="date_birthday"></div>
+            <button onclick="hideDaysCount()">Очистить поле ввода</button>
         </div>
 
     </main>
