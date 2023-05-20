@@ -15,3 +15,12 @@ function showDate () {
     out_5.innerHTML = 'Дата и время для локали Германии: ' + today.toLocaleString('de-DE');
     out_6.innerHTML = 'Дата и время для локали Морокко: ' + today.toLocaleString('ar-MA');
 }
+function showDaysCount() {
+    let birth = document.getElementById('date_birthday');
+    let today = new Date();
+    let inputDate = document.querySelector('input[type=date]');
+    let birthday = new Date(inputDate.value);
+    let daysCount = (today - birthday)/1000/60/60/24;
+    daysCount = Math.floor(daysCount);
+    birth.innerHTML = 'Количество дней с даты рождения:' + daysCount;
+}
